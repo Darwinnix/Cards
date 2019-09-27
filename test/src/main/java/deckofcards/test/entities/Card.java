@@ -12,13 +12,13 @@ import deckofcards.test.enums.Values;
 
 public class Card {
 
-    Colours color;
-    Values value;
+    private Colours color;
+    private int value;
 
     public Card() {
     }
 
-    public Card(Colours color, Values value) {
+    public Card(Colours color, int value) {
         this.color = color;
         this.value = value;
     }
@@ -31,11 +31,11 @@ public class Card {
         this.color = color;
     }
 
-    public Values getValue() {
+    public int getValue() {
         return value;
     }
 
-    public void setValue(Values value) {
+    public void setValue(int value) {
         this.value = value;
     }
 }

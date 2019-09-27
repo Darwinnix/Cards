@@ -4,6 +4,7 @@ import deckofcards.test.controllers.DeckMakerController;
 import deckofcards.test.entities.Deck;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 import deckofcards.test.services.DeckMakerService;
 
@@ -16,7 +17,7 @@ import deckofcards.test.services.DeckMakerService;
  * Created 26 septembre 2019
  * @package deckofcards.test.Controllers.impl
  */
-
+@CrossOrigin
 @RestController
 public class DeckMakerControllerImpl implements DeckMakerController {
 

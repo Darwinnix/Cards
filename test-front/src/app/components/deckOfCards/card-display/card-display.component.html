@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-body carte">
+    <div class="colour-image top">
+      <div [ngClass]="{
+      'coeur': color == 'HEART',
+      'pique': color == 'SPADE',
+      'carreau': color == 'DIAMOND',
+      'trefle': color == 'CLUB'
+      }"></div>
+    </div>
+    <div class="body" [ngClass]="{
+    'red': color == 'HEART' || color == 'DIAMOND',
+    'black': color == 'CLUB' || color == 'SPADE'
+    }">
+      {{value}}
+    </div>
+    <div class="colour-image bottom">
+      <div [ngClass]="{
+      'coeur': color == 'HEART',
+      'pique': color == 'SPADE',
+      'carreau': color == 'DIAMOND',
+      'trefle': color == 'CLUB'
+      }"></div>
+  </div>
+</div>

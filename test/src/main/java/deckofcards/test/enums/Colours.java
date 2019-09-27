@@ -9,5 +9,5 @@ public enum Colours {
     HEART,
     DIAMOND,
     CLUB,
-    CLOVER
+    SPADE
 }

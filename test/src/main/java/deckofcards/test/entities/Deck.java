@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * @Author Julien Le Fur
- * Created 26 septembre 2019
+ * Created 28 septembre 2019
  * @package deckofcards.test.entities
  */
 public class Deck {

@@ -9,12 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 import deckofcards.test.services.DeckMakerService;
 
 /**
- * Copyright (C) ACENSI, INC - All Right Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited
- * Proprietary and confidential
- *
- * @Author Julien Le Fur (julien.lefur@acensi.fr)
- * Created 26 septembre 2019
+ * @Author Julien Le Fur
+ * Created 28 septembre 2019
  * @package deckofcards.test.Controllers.impl
  */
 @CrossOrigin

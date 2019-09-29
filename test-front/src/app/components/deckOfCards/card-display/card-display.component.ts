@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {DeckOfCardsService} from "../service/deck-of-cards.service";
 
 @Component({
   selector: 'app-card-display',

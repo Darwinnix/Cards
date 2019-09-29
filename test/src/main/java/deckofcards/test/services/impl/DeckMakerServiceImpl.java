@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * @Author Julien Le Fur
- * Created 26 septembre 2019
+ * Created 28 septembre 2019
  * @package services.impl
  */
 
@@ -25,12 +25,6 @@ public class DeckMakerServiceImpl implements DeckMakerService {
     public Deck makeFullDeckOfCards() {
         Deck deck = new Deck();
         List<Card> cards = new ArrayList<>();
-       /* EnumSet.allOf(Colours.class).forEach(color -> {
-            EnumSet.allOf(Values.class).forEach(value -> {
-                deck.getCards().add(new Card(color, value));
-            });
-        });*/
-
         for (Colours col : Colours.values()) {
             for (Values val: Values.values()) {
                 cards.add(new Card(col, val.getValue()));

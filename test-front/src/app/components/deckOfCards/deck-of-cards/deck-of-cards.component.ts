@@ -1,6 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {DeckOfCardsService} from "../service/deck-of-cards.service";
-import {CardModel} from "../../../shared/models/card.model";
 import {Subscription} from "rxjs";
 
 @Component({
@@ -10,15 +9,17 @@ import {Subscription} from "rxjs";
 })
 export class DeckOfCardsComponent implements OnInit, OnDestroy {
 
-  deck: CardModel[] = [];
+  deck: any;
   sub: Subscription;
+  breakpoint;
 
   constructor(
     private _deckOfCardService: DeckOfCardsService
   ) { }
 
   ngOnInit() {
-    this.getFullDeck()
+    this.getFullDeck();
+    this.breakpoint = Math.floor(window.innerWidth / 200);
   }
 
   getFullDeck() {
@@ -26,6 +27,11 @@ export class DeckOfCardsComponent implements OnInit, OnDestroy {
       this.deck = res.cards;
       console.log(res);
     })
+  }
+
+  onResize(event) {
+    const element = event.target.innerWidth;
+    this.breakpoint = Math.floor(element / 200);
   }
 
   ngOnDestroy(): void {

@@ -1,7 +1,7 @@
-<mat-grid-list cols="10" rowHeight="250px">
-  <mat-grid-tile *ngFor="let card of deck">
-    <app-card-display *ngIf="card.color && card.value" [color]="card.color" [value]="card.value"></app-card-display>
-  </mat-grid-tile>
-</mat-grid-list>
-
-<app-card-display></app-card-display>
+<div class="container">
+  <mat-grid-list cols="{{breakpoint}}" rowHeight="250px" (window:resize)="onResize($event)">
+    <mat-grid-tile class="bg-tile" *ngFor="let card of deck">
+      <app-card-display *ngIf="card.color && card.value" [color]="card.color" [value]="card.value"></app-card-display>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
